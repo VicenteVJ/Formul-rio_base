@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Abertura de preço balcão</h1>
+            <p id="subtitulo">Preencha a Requisição</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form>
+
+            <fieldset class="grupo">
+                <!-- Campo da matrícula do cliente com legenda "matricula_cliente" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="matricula_cliente"><strong>Matrícula do Cliente</strong></label>
+                    <input type="text" name="matricula_cliente" id="matricula_cliente" pattern="[0-9]*" maxlength="6" required>
+                </div>
+            
+                <!-- Campo do nome do cliente com legenda "nome_cliente" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome_cliente"><strong>Nome do Cliente</strong></label>
+                    <input type="text" name="nome_cliente" id="nome_cliente" required>
+                </div>
+            </fieldset>      
+            
+            <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="senioridade"><strong>Subgerente responsável</strong></label>
+                <select id="senioridade" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option>Vicente</option>
+                  <option>Gabriel</option>
+                  <option>Felipe</option>
+                </select>
+            </div>
+
+            <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+                <label><strong>Produto</strong></label>
+                <label>
+                    <input type="radio" name="devweb" value="frontend" checked>Soja
+                </label>
+                <label>
+                    <input type="radio" name="devweb" value="backend">Milho
+                </label>
+                <label>
+                    <input type="radio" name="devweb" value="fullstack">Trigo
+                </label>
+            </div>
+
+            <!-- Campo de Quantidade com-->
+            <div class="campo">
+                <label for="Quantidade"><strong>Quantidade</strong></label>
+                <input type="Quantidade" name="Quantidade" id="Quantidade" required>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+                <div id="check">
+                    <label><strong>Período solicitado:</strong></label><br><br>
+                    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                    <label for="tecnologia1"> Manhã</label>
+                    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+                    <label for="tecnologia2"> Tarde</label>
+                </div>
+            </fieldset>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="experiencia"><strong>Motivo: </strong></label>
+                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
+
+
+
+
